@@ -1,0 +1,26 @@
+<mat-toolbar class="max-w-7x1 mx-auto border-x justify-between">
+    <a routerLink="home"> FrontEndShop</a>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>shopping_cart</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <div class="p-3 divide-y divide-solid">
+            <div class="pb-3 flex justify-between">
+                <span class="mr-16">Items</span>
+                <a routerLink="cart">View cart</a>
+            </div>
+            <div class="flex justify-between font-light mb-2">
+                Item <span class="font-bold">{{'150' | currency:'€' }}</span>
+            </div>
+            <div class="flex justify-between py-3 font-light">
+                Total: <span class="font-bold">{{ '150' | currency:'€'}}</span>
+            </div>
+            <div class="pt-3 flex justify-between">
+                <button class="bg-rose-600 text-white rounded-full w-9 h-9" >
+                    <mat-icon>remove_shopping_cart</mat-icon>
+                </button>
+            </div>
+        </div>
+    </mat-menu>
+</mat-toolbar>

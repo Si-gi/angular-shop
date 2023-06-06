@@ -10,9 +10,11 @@ const ROWS_HEIGHT: { [id: number]: number } = { 1: 400, 3: 335, 4: 350 };
 export class HomeComponent {
   category: string | undefined;
   cols = 3;
+  rowHeight = ROWS_HEIGHT[this.cols]
 
   onColumnsChange(colsNb: number): void {
     this.cols = colsNb;
+    this.rowHeight = ROWS_HEIGHT[this.cols]
   }
 
   onShowCategory(newCategory: string): void {

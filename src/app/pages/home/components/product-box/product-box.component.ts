@@ -8,17 +8,9 @@ import { Product } from 'src/app/models/product.model'
 })
 export class ProductBoxComponent {
   @Input() fullwithMode = false;
-  
-  product : Product | undefined = {
-    id: 0,
-    title: 'courgette',
-    price: 2,
-    category: 'legumes',
-    description: 'courgette verte',
-    image: 'https://via.placeholder.com/150;',
-  };
-
+  @Input() product : Product | undefined;
   @Output() addToCart = new EventEmitter()
+  
   constructor () {}
 
   onAddToCart(): void{
